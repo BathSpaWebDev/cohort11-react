@@ -1,11 +1,19 @@
+.App.darkmode {
+  background-color: #000;
+}
 .postcard {
   display: flex;
   flex-direction: row;
+  align-items: start;
   gap: 1rem;
   padding:2rem;
   border: 1px solid gray;
   width:500px;
   margin: 1rem;
+}
+.postcard.darkmode {
+  background-color: #444;
+  color: #fff;
 }
 .postcard__text {
   flex-basis: auto;
@@ -19,4 +27,7 @@
 
 .postcard__image img {
   width:100%;
+}
+.dark-image {
+  border:1rem solid black;
 }

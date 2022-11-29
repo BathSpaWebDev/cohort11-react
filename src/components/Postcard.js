@@ -2,12 +2,12 @@ import PostcardImage from "./PostcardImage";
 import PostcardText from "./PostcardText";
 
 
-function Postcard({imageSrc, text, title}) {
+function Postcard({imageSrc, text, title, isDarkMode, children}) {
     
     return (
-        <div className="postcard">
-            <PostcardImage imageSrc={imageSrc} />
-            <PostcardText title={title} text={text} />
+        <div className={`postcard ${isDarkMode ? 'darkmode' : '' }`}>
+            <PostcardImage imageSrc={imageSrc} isDarkMode={isDarkMode} />
+            <PostcardText title={title} text={children} isDarkMode={isDarkMode} />
         </div>
     )
 }
